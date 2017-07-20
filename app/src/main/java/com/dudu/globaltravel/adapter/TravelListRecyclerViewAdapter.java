@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.dudu.globaltravel.bean.AdInfoModel;
 import com.dudu.globaltravel.bean.TravelNoteListModel;
+import com.dudu.globaltravel.ui.activity.TravelNoteDetailActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -86,11 +87,13 @@ public class TravelListRecyclerViewAdapter extends RecyclerView.Adapter
             Glide.with(mContext).load(listData.get(position-1).front_cover_photo_url).into(imageView);
             Glide.with(mContext).load(listData.get(position-1).user.image).into(user_icon);
             title.setText(listData.get(position-1).name);
-            sub_title.setText(listData.get(position).start_date+"/"+listData.get(position).days+"天/"+listData.get(position).photos_count+"图");
+            sub_title.setText(listData.get(position - 1).start_date+"/"+listData.get(position - 1).days+"天/"+listData.get(position - 1).photos_count+"图");
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Intent intent = new Intent(mContext, TravelNoteDetailActivity.class);
+                    mContext.startActivity(intent);
                     showToast("点击了第" + position + "行");
                 }
             });
