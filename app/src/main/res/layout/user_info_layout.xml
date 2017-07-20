@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/traveler_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        android:layout_marginTop="10dp"
+        app:civ_border_color="#000000"
+        app:civ_border_width="2px"
+        android:src="@mipmap/timg2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:text="鹰眼"
+        android:textColor="#262626"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="22dp"
+        layout="@layout/layout_horizontal_line"/>
+    <LinearLayout
+        android:id="@+id/travel_user_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/black_bean"
+                style="@style/text_title_style"
+                android:text="收藏"/>
+
+            <TextView
+                android:id="@+id/name_text"
+                style="@style/text_title_style"
+                android:textColor="@android:color/black"
+                android:text="10"/>
+        </LinearLayout>
+        <View style="@style/divider_vertical_style"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/red_bean"
+                style="@style/text_title_style"
+                android:text="点赞"/>
+
+            <TextView
+                style="@style/text_title_style"
+                android:textColor="@android:color/black"
+                android:text="120"/>
+
+        </LinearLayout>
+
+        <View style="@style/divider_vertical_style"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/green_bean"
+                style="@style/text_title_style"
+                android:text="原创"/>
+
+            <TextView
+                style="@style/text_title_style"
+                android:textColor="@android:color/black"
+                android:text="22"/>
+
+        </LinearLayout>
+
+        <View style="@style/divider_vertical_style"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/yellow_bean"
+                style="@style/text_title_style"
+                android:text="分享"/>
+
+            <TextView
+                style="@style/text_title_style"
+                android:textColor="@android:color/black"
+                android:text="187"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
