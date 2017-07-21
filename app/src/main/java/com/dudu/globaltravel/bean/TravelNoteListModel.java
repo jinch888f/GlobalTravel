@@ -1,15 +1,20 @@
 package com.dudu.globaltravel.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by mac on 2017/7/12.
  */
 
 public class TravelNoteListModel {
-   public String name;
-   public int photos_count;
-   public String start_date;
-   public String end_date;
-   public int days;
+    //处理JSON数据中与关键字冲突的字段
+    @SerializedName("id")
+    public int t_id;
+    public String name;
+    public int photos_count;
+    public String start_date;
+    public String end_date;
+    public int days;
 
     public void setDays(int days) {
         this.days = days;
@@ -21,11 +26,19 @@ public class TravelNoteListModel {
     }
 
     public String front_cover_photo_url;
-   public User user;
+    public User user;
 
     public TravelNoteListModel() {
     }
 
+    public void setT_id(int t_id) {
+        this.t_id = t_id;
+    }
+
+    public int getT_id() {
+
+        return t_id;
+    }
     public String getName() {
         return name;
     }

@@ -93,8 +93,9 @@ public class TravelListRecyclerViewAdapter extends RecyclerView.Adapter
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(mContext, TravelNoteDetailActivity.class);
+                    intent.putExtra("t_id",listData.get(position - 1).t_id);
                     mContext.startActivity(intent);
-                    showToast("点击了第" + position + "行");
+                    System.out.println("++++++++++"+listData.get(position).t_id);
                 }
             });
         }else {

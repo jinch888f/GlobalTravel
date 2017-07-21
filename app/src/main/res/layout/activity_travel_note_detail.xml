@@ -33,10 +33,21 @@
             android:textColor="#ffffff"
             android:text="游记"/>
         <View
+            android:id="@+id/note_detail_toolBar_diverLine"
             android:layout_width="match_parent"
             android:layout_height="2px"
             android:layout_alignParentBottom="true"
             android:background="#fbfdfeff"/>
     </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ly_top_bar">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/note_detail_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
 
 </RelativeLayout>

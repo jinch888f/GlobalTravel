@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/note_detail_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:textColor="@color/black"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="3dp"
+        android:text="张家界的三千奇峰，景色绝佳，但这里的气候湿润，雨量特别充沛，尤其是春末夏初频繁的降雨天气，让很多游客担心游玩会收到影响。当然，要是赶上连续的降雨或者阴天，张家界的美景的确会减色不少，但就算是天气晴朗.蓝天白云，也绝不是张家界最美的景色。因为，雨后，尤其是大雨过后，如果天气放晴，有云海或云雾出现，静静缠绕在俊俏挺拔的奇峰之间，漫过天际，张家的美景才会让你恍如进入了仙境一般，如痴如醉。因此，如果在你的出行计划中，如果张家界的天气预报有雨，那你应该感到高兴，虽然这并不能保证你一定会看到云海或云雾，但起码可能性会增加不少。当然像我这样上午看到云海，下午蓝天白云的极品天气，肯定是可遇而不可求的，只有我才能有这样超强的人品。"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/note_detail_description">
+        <Button
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_30"
+            android:text="点赞"
+            android:layout_margin="@dimen/dp_5"/>
+        <Button
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_30"
+            android:text="评论"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_10"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_color"/>
+</RelativeLayout>
